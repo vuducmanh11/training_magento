@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: anhnc
- * Date: 09/01/2017
- * Time: 14:01
- */
 
 namespace Magestore\Multivendor\Controller\Adminhtml\Vendor;
 use Magento\Framework\App\Filesystem\DirectoryList;
@@ -45,7 +39,7 @@ class Save extends \Magestore\Multivendor\Controller\Adminhtml\Vendor
 
                 if(isset($data['in_products'])){
                     $productIds = preg_replace("/(&)/", ',', $data['in_products']);
-     
+
                     $vendorId = $vendor_model->getId();
 
                     $vendorProductModel = $this->_objectManager->create('Magestore\Multivendor\Model\VendorProduct')->load($vendorId, 'vendor_id');
